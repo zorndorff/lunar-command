@@ -1,0 +1,18 @@
+{
+  "name": "lunar-command-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.2",
+    "pixi.js": "^5.3.3",
+    "matter-js": "^0.14.2"
+  },
+  "devDependencies": {
+    "vite": "^1.0.0-rc.8",
+    "@vue/compiler-sfc": "^3.0.2",
+    "@types/matter-js": "^0.14.6"
+  }
+}
