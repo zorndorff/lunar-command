@@ -6,9 +6,10 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.2",
+    "matter-js": "^0.14.2",
     "pixi.js": "^5.3.3",
-    "matter-js": "^0.14.2"
+    "vue": "^3.0.2",
+    "vuex": "^4.0.0-rc.1"
   },
   "devDependencies": {
     "vite": "^1.0.0-rc.8",
