@@ -96,18 +96,7 @@ const Renderer = Vue.extend({
   },
   mounted() {
     console.log('CREATED RENDERER');
-    this.worker.addEventListener('message', ({ data }: {data: {
-      message: string,
-      entities: Entity[]
-    }}) => {
-      let message :string = data.message;
-
-      switch (message) {
-        case 'SIM_UPDATE':
-          this.updateEntityState(data.entities);
-        break;
-      }
-    });
+    
     this.init();
   },
   created: function () {

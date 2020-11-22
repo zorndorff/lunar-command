@@ -1,4 +1,4 @@
-import {Engine, World, Body, Bodies} from 'matter-js';
+import {Engine, World, Bodies} from 'matter-js';
 
 const ctx: Worker = self as any;
 
@@ -141,6 +141,7 @@ export class SimWorker {
 }
 
 const sw = new SimWorker();
+sw.start();
 
 // Respond to message from parent thread
 ctx.addEventListener('message', (event) => sw.handleMessage(event));
