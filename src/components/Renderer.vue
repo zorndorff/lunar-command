@@ -6,9 +6,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { computed, defineComponent } from 'vue'
 import * as PIXI from 'pixi.js';
-import { Entity, ENTITY_TYPE, SimOptions, WORKER_COMMANDS } from '~/lib/sim.worker';
+import { Entity, ENTITY_TYPE, SimOptions, WORKER_COMMANDS } from '@/sim.worker';
+import { useStore } from 'vuex';
 
 
 interface RenderData {
@@ -20,7 +21,15 @@ interface RenderData {
   canvasHeight: number,
 }
 
-const Renderer = Vue.extend({
+const Renderer = defineComponent({
+  setup() {
+    const store = useStore();
+    const entities = computed(() => store.getters.entities)
+
+    return {
+      entities,
+    }
+  },
   data() {
     return {
       entities: [{
